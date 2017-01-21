@@ -4,7 +4,6 @@ USE pigeon;
 
 CREATE TABLE users (
 	id          INT         NOT NULL AUTO_INCREMENT,
-	code        VARCHAR(20) NOT NULL,
 	name        VARCHAR(20) NOT NULL,
 	imei        VARCHAR(20) NOT NULL,
 	device_hash TEXT        NOT NULL,
@@ -14,13 +13,16 @@ CREATE TABLE users (
 	created_at  TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (id),
 	UNIQUE KEY (api_key),
-	UNIQUE KEY (code),
 	UNIQUE KEY (imei)
 );
 
 CREATE TABLE locations(
-	id INT NOT NULL AUTO_INCREMENT,
+	id          INT NOT NULL AUTO_INCREMENT,
+	user_id     INT NOT NULL,
 	lat         VARCHAR(20)  NOT NULL,
 	lon         VARCHAR(20)  NOT NULL,
-	PRIMARY KEY (id),
+	speed       BIGINT NOT NULL,
+	device_timestamp BIGINT NOT NULL,
+	created_at  TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (id)
 );
