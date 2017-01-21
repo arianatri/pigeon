@@ -2,79 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8511bf33-240a-4944-8070-15724e501ab8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/design/assets/map_current.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/design/assets/map_first.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/design/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/design/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/design/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/design/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/map_current.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/map_first.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/design/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/design/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/design/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/design/js/jquery-2.2.4.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/design/js/validator.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/design/styles/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/design/styles/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/database/Connection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/database/tables/BaseTable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/database/tables/Users.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/models/Location.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/models/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/servlets/AdvancedBaseServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/servlets/GetAPIKeyServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/servlets/RequestLocationServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/servlets/UpdateFCMServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/sockets/PigeonSocket.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/utils/FCMUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/utils/HeaderSecurity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/utils/RandomString.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/utils/Request.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/utils/Response.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/META-INF/context.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/common_headers.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/error.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-2.2.4.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/validator.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/styles/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/styles/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/.idea/runConfigurations.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/activities/MainActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/activities/base/PermissionActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/asyncs/BaseJSONPostNetworkAsyncTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/asyncs/FCMSynchronizer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/model/SocketMessage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/model/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/receivers/LocationProviderListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/receivers/NetworkReceiver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/services/LocationReporterService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/services/firebase/InstanceIdService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/services/firebase/LocationRequestReceiverService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/utils/APIRequestBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/utils/APIRequestGateway.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/utils/App.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/utils/CommonUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/utils/DarKnight.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/utils/FileUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/utils/NetworkUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/utils/OkHttpUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/utils/PermissionUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/utils/PrefUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/utils/ProfileUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/utils/Response.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/app/src/main/java/com/theah64/pigeon/utils/WebSocketHelper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../database.sql" afterPath="$PROJECT_DIR$/extras/database.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/design/index.html" afterPath="$PROJECT_DIR$/design/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/design/styles/style.css" afterPath="$PROJECT_DIR$/design/styles/style.css" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,58 +20,26 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/design/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="51" lean-forward="false" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PigeonSocket.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/theah64/pigeon/sockets/PigeonSocket.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="82" column="21" lean-forward="false" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+            <state relative-caret-position="315">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#9423#9424#0" expanded="true" />
-                <element signature="e#9463#9464#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/theah64/pigeon/models/User.java">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/design/styles/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="66" column="18" lean-forward="false" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Users.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/theah64/pigeon/database/tables/Users.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="43" column="59" lean-forward="false" selection-start-line="43" selection-start-column="59" selection-end-line="43" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1485022445929" expanded="true" signature="2023:2098" ph="INSERT INTO users... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FCMUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/theah64/pigeon/utils/FCMUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="585">
+              <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -198,11 +96,12 @@
         <option value="$PROJECT_DIR$/src/com/theah64/pigeon/utils/APIResponse.java" />
         <option value="$PROJECT_DIR$/src/com/theah64/pigeon/utils/Response.java" />
         <option value="$PROJECT_DIR$/src/com/theah64/pigeon/servlets/AdvancedBaseServlet.java" />
-        <option value="$PROJECT_DIR$/design/index.html" />
         <option value="$PROJECT_DIR$/src/com/theah64/pigeon/utils/FCMUtils.java" />
         <option value="$PROJECT_DIR$/src/com/theah64/pigeon/database/tables/Users.java" />
         <option value="$PROJECT_DIR$/src/com/theah64/pigeon/models/User.java" />
         <option value="$PROJECT_DIR$/src/com/theah64/pigeon/sockets/PigeonSocket.java" />
+        <option value="$PROJECT_DIR$/design/index.html" />
+        <option value="$PROJECT_DIR$/design/styles/style.css" />
       </list>
     </option>
   </component>
@@ -371,7 +270,7 @@
       <recent name="$PROJECT_DIR$/extras" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.pigeonCat">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/pigeon_api/design/index.html">
       <method />
     </configuration>
@@ -851,12 +750,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1484999608249</updated>
-      <workItem from="1484999613701" duration="18222000" />
+      <workItem from="1484999613701" duration="21296000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18222000" />
+    <option name="totallyTimeSpent" value="21296000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="51" y="24" width="1315" height="744" extended-state="6" />
@@ -882,7 +781,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.593423" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.593423" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24942966" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -1100,14 +999,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/design/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="51" lean-forward="false" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/theah64/pigeon/servlets/RequestLocationServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -1153,6 +1044,27 @@
             <element signature="imports" expanded="true" />
             <element signature="e#9423#9424#0" expanded="true" />
             <element signature="e#9463#9464#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/styles/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

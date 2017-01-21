@@ -11,6 +11,54 @@
 </head>
 <body>
 
+<div class="container-fluid full">
 
+    <!--Map-->
+    <div class="row full">
+        <div class="col-md-12 full">
+            <div class="full" id="map">
+            </div>
+        </div>
+    </div>
+
+    <!--Control panel-->
+    <div class="row" >
+
+        <div id="main" style="text-align: center;">
+
+            <!--Online offline symbol-->
+            <div class="col-md-2" style="background-color: red">
+                <div id="status_color"></div>
+            </div>
+
+            <div class="col-md-8" style="background-color: green">
+                <h1 id="speed">100kmph</h1>
+                <p id="status">12.545454,65.6565655</p>
+            </div>
+
+            <div class="col-md-2" style="background-color: blue">
+                <span class="glyphicon glyphicon-map-marker"></span>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<script>
+    function myMap() {
+        var mapCanvas = document.getElementById("map");
+        var mapOptions = {
+            center: new google.maps.LatLng(51.5, -0.2),
+            zoom: 5
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiwaKupCMBsk9HAsqhNlOzUXKMEcZxLxg&callback=myMap"></script>
 </body>
 </html>
