@@ -12,7 +12,6 @@
 <body>
 
 <div class="container-fluid full">
-
     <!--Map-->
     <div class="row full">
         <div class="col-md-12 full">
@@ -22,29 +21,30 @@
     </div>
 
     <!--Control panel-->
-    <div class="row" >
+    <div id="mainContainer" class="row m0p0">
+        <div class="col-md-8 content-centered">
+            <div id="main">
+                <div class="row">
+                    <!--RED/GREEN-->
+                    <div class="col-md-2">
+                        <div id="statusSignal">
 
-        <div id="main" style="text-align: center;">
-
-            <!--Online offline symbol-->
-            <div class="col-md-2" style="background-color: red">
-                <div id="status_color"></div>
+                        </div>
+                    </div>
+                    <!--STATUS-SPEED-STATUS-->
+                    <div class="col-md-8" style="text-align: center">
+                        <p id="status1">Connecting to server</p>
+                        <h3 id="speed"><strong>143kmph</strong></h3>
+                        <h6 id="status2">12.465654N, 65.65656E</h6>
+                    </div>
+                    <!--VIEW IN MAP BUTTON-->
+                    <div class="col-md-2" style="text-align: center">
+                        <span id="mapMarker" style="font-size: 28px" class="glyphicon glyphicon-map-marker"></span>
+                    </div>
+                </div>
             </div>
-
-            <div class="col-md-8" style="background-color: green">
-                <h1 id="speed">100kmph</h1>
-                <p id="status">12.545454,65.6565655</p>
-            </div>
-
-            <div class="col-md-2" style="background-color: blue">
-                <span class="glyphicon glyphicon-map-marker"></span>
-            </div>
-
         </div>
-
-
     </div>
-
 
 </div>
 
