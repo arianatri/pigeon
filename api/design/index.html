@@ -8,6 +8,13 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/validator.min.js"></script>
     <link rel="stylesheet" href="styles/style.css">
+
+    <script>
+        $(document).ready(function(){
+
+        });
+    </script>
+
 </head>
 <body>
 
@@ -53,8 +60,8 @@
     function myMap() {
         var mapCanvas = document.getElementById("map");
         var mapOptions = {
-            center: new google.maps.LatLng(51.5, -0.2),
-            zoom: 5
+            center: new google.maps.LatLng(26.9259923, 79.2484255),
+            zoom: 3
         }
         var map = new google.maps.Map(mapCanvas, mapOptions);
     }

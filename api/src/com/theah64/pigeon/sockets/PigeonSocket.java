@@ -64,24 +64,7 @@ public class PigeonSocket {
                     System.out.println("Total listener for " + userId + " - " + listenerSessions.get(userId).size());
                     System.out.println("Total tellers : " + tellerSessions.size());
 
-                    //Checking if there's a teller session
-                    System.out.println("Sending teller ping...");
-
-                    //No teller session available, so send a new request
-                    final JSONArray jaFcmIds = new JSONArray();
-                    jaFcmIds.put(user.getFCMId());
-
-                    //Alright
-                    final JSONObject joFcmResp = FCMUtils.sendLocationRequest(jaFcmIds);
-
-                    final boolean isEverythingOk = joFcmResp != null && joFcmResp.getInt("failure") == 0;
-
-                    if (isEverythingOk) {
-                        session.getBasicRemote().sendText(new Response("Location request sent", null).getResponse());
-                    } else {
-                        throw new PigeonSocketException("Failed to send location request", PigeonSocketException.ERROR_CODE_FCM_FIRE_FAILED);
-                    }
-
+                    sendTellerPing(user, session);
 
                 } else if (type.equals(TYPE_TELLER)) {
                     //Connection made by an android device normally - new connection
@@ -105,6 +88,9 @@ public class PigeonSocket {
                             listener.getBasicRemote().sendText(new Response("Device connected", null).getResponse());
                         }
 
+                        //Sending teller a location request
+                        sendTellerPing(user, session);
+
                     } else {
                         //No listener for the teller, so telling a story to the air is meaning less. therefore, closing the teller
                         throw new PigeonSocketException("No listeners found for " + userId, PigeonSocketException.ERROR_CODE_NO_LISTENER_FOUND);
@@ -121,15 +107,37 @@ public class PigeonSocket {
         } catch (PigeonSocketException e) {
             e.printStackTrace();
 
-            //Building error
-            session.getBasicRemote().sendText(new Response(e.getErrorCode(), e.getMessage()).getResponse());
-
             if (e.getErrorCode() % 2 != 0) {
                 //even number error codes are fatal errors
                 System.out.println("FATAL ERROR");
-                session.close();
+                session.close(new CloseReason(CloseReason.CloseCodes.NORMAL_CLOSURE, e.getMessage()));
+            } else {
+                //Building error
+                session.getBasicRemote().sendText(new Response(e.getErrorCode(), e.getMessage()).getResponse());
             }
         }
+    }
+
+    private void sendTellerPing(final User user, final Session session) throws IOException, PigeonSocketException, JSONException {
+
+        //Checking if there's a teller session
+        System.out.println("Sending teller ping...");
+
+        //No teller session available, so send a new request
+        final JSONArray jaFcmIds = new JSONArray();
+        jaFcmIds.put(user.getFCMId());
+
+        //Alright
+        final JSONObject joFcmResp = FCMUtils.sendLocationRequest(jaFcmIds);
+
+        final boolean isEverythingOk = joFcmResp != null && joFcmResp.getInt("failure") == 0;
+
+        if (isEverythingOk) {
+            session.getBasicRemote().sendText(new Response("Location request sent", null).getResponse());
+        } else {
+            throw new PigeonSocketException("Failed to send location request", PigeonSocketException.ERROR_CODE_FCM_FIRE_FAILED);
+        }
+
     }
 
     @OnMessage

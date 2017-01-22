@@ -1,11 +1,3 @@
-/*body {
-    background: url(/assets/clean-gray-paper.png) repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}*/
-
 body, html {
     background-color: #f5f5f5;
     height: 100%;
@@ -68,4 +60,19 @@ div#statusSignal{
 span#mapMarker {
     position: absolute;
     top: 42px;
+}
+
+p#status1{
+    font-size: 12px;
+    margin-top: 6px;
+    font-style: italic;
+    color: #969696;
+}
+
+h3#speed {
+    margin: 0;
+}
+
+span#mapMarker{
+    cursor: pointer;
 }

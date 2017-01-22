@@ -1,16 +1,226 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: theapache64
-  Date: 21/1/17
-  Time: 5:23 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<%@ page import="com.theah64.pigeon.database.tables.Users" %>
+<%@ page import="com.theah64.pigeon.models.User" %>
+<%@ page import="java.util.Arrays" %>
+<!DOCTYPE html>
+<html lang="en">
+<%
+    final String userId = request.getParameter("user_id");
+    final User user = Users.getInstance().get(Users.COLUMN_ID, userId);
+    if (user == null) {
+        response.sendRedirect("/error.jsp?title=Invalid user&message=Invalid userId passed " + userId);
+        return;
+    }
+%>
+<head>
+    <meta charset="UTF-8">
+    <title><%=user.getName()%> -Pigeon</title>
+    <%@include file="common_headers.jsp" %>
+    <script>
+        var map;
+
+        $(document).ready(function () {
+
+            $("h3#speed span").hide();
+            $("span#mapMarker").hide();
+
+            var socketUrl = "<%=(Connection.isDebugMode()
+            ? "ws://localhost:8080/v1/pigeon_socket/listener/"
+            : "ws://theapache64:8080/pigeon/v1/pigeon_socket/listener") + userId%>";
+
+            var webSocket = new WebSocket(socketUrl);
+            var isDeviceResponded = false;
+            var lastLat;
+            var lastLon;
+            var isFirstLocation = true;
+
+            var poly;
+            var marker;
+            var gLatLon;
+
+            updateStatus("Opening socket...");
+
+            webSocket.onopen = function (evnt) {
+
+                updateStatus("Waiting for device response...");
+                setStatusGood();
+
+                setTimeout(function () {
+                    if (!isDeviceResponded) {
+                        setStatusBad();
+                        updateStatus("Device OFFLINE");
+                    }
+                }, 10000);
+
+            };
+
+            webSocket.onmessage = function (evnt) {
+
+                isDeviceResponded = true;
+                var joResp = JSON.parse(evnt.data);
+                console.log(joResp);
+
+                var message = joResp.message;
+                updateStatus(message);
+                setStatusGood();
+
+                if (joResp.error) {
+                    setStatusBad();
+                } else {
+
+                    var joData = joResp.data;
+                    if (joData) {
+                        if (joData.type == 'location') {
+
+                            if ($("p#status1").hasClass("blink")) {
+                                $("p#status1").removeClass("blink");
+                            }
+
+                            if (!$("h3#speed span").is(":visible")) {
+                                $("h3#speed span").fadeIn(500);
+                            }
+
+                            if (!$("span#mapMarker").is(":visible")) {
+                                $("span#mapMarker").fadeIn(500);
+                            }
+
+
+                            lastLat = joData.lat;
+                            lastLon = joData.lon;
+
+                            $("h6#status2").text(lastLat + "," + lastLon);
+                            $("strong#strongSpeed").text(joData.speed);
+
+                            if (marker) {
+                                //Clearing old marker
+                                marker.setMap(null);
+                            }
+
+                            //Moving map
+                            gLatLon = new google.maps.LatLng(lastLat, lastLon);
+                            marker = new google.maps.Marker({
+                                position: gLatLon
+                            });
+
+                            if (isFirstLocation) {
+
+                                isFirstLocation = false;
+
+                                poly = new google.maps.Polyline({
+                                    strokeColor: '#000000',
+                                    strokeOpacity: 1.0,
+                                    strokeWeight: 3
+                                });
+
+                                poly.setMap(map);
+
+                                map.setZoom(12);
+                                map.setCenter(marker.getPosition());
+                                map.panTo(gLatLon);
+                            }
+
+                            marker.setMap(map);
+                            poly.getPath().push(gLatLon);
+
+                        } else if (joData.type == 'satellite') {
+                            $("h6#status2").text("");
+                            $("strong#strongSpeed").text("");
+                            $("h3#speed span").fadeOut(500);
+                            $("p#status1").addClass("blink");
+                            $("span#mapMarker").fadeOut(500);
+
+                        }
+                    }
+
+                }
+
+            };
+
+            webSocket.onclose = function (evnt) {
+                updateStatus("ERROR: " + evnt.reason);
+                console.log(evnt);
+                setStatusBad();
+            };
+
+            webSocket.onerror = function (evnt) {
+                updateStatus("ERROR: " + evnt.data);
+                setStatusBad();
+            };
+
+            $("span#mapMarker").click(function () {
+                var url = "http://maps.google.com/maps?z=12&t=m&q=loc:" + lastLat + "+ " + lastLon;
+                window.open(url, '_blank');
+            });
+
+            function updateStatus(message) {
+                $("p#status1").text(message);
+            }
+
+            function setStatusGood() {
+                $("div#statusSignal").removeClass("statusBad").addClass("statusGood");
+            }
+
+            function setStatusBad() {
+                $("div#statusSignal").addClass("statusBad").removeClass("statusGood");
+            }
+
+
+        });
+    </script>
+
+</head>
+<body>
+
+<div class="container-fluid full">
+    <!--Map-->
+    <div class="row full">
+        <div class="col-md-12 full">
+            <div class="full" id="map">
+            </div>
+        </div>
+    </div>
+
+    <!--Control panel-->
+    <div id="mainContainer" class="row m0p0">
+        <div class="col-md-8 content-centered">
+            <div id="main">
+                <div class="row">
+                    <!--RED/GREEN-->
+                    <div class="col-md-2">
+                        <div id="statusSignal">
+
+                        </div>
+                    </div>
+                    <!--STATUS-SPEED-STATUS-->
+                    <div class="col-md-8" style="text-align: center">
+                        <p id="status1"></p>
+                        <h3 id="speed"><strong id="strongSpeed"></strong><span
+                                style="font-size: 16px;  color: #949494;">kmph</span></h3>
+                        <h6 id="status2"></h6>
+                    </div>
+                    <!--VIEW IN MAP BUTTON-->
+                    <div class="col-md-2" style="text-align: center">
+                        <span id="mapMarker" style="font-size: 28px" class="glyphicon glyphicon-map-marker"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+
+    function myMap() {
+        var mapCanvas = document.getElementById("map");
+        var mapOptions = {
+            center: new google.maps.LatLng(26.9259923, 79.2484255),
+            zoom: 3
+        };
+
+        map = new google.maps.Map(mapCanvas, mapOptions);
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiwaKupCMBsk9HAsqhNlOzUXKMEcZxLxg&callback=myMap"></script>
+</body>
 </html>

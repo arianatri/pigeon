@@ -53,7 +53,6 @@ public class WebSocketHelper {
                         final SocketMessage socketMessage = pendingMessages.poll();
                         WebSocketHelper.this.send(socketMessage);
                     }
-
                 }
 
                 @Override

@@ -30,7 +30,7 @@ public class Users extends BaseTable<User> {
     @Override
     public User get(String column, String value) {
         User user = null;
-        final String query = String.format("SELECT id,fcm_id, api_key FROM users WHERE %s = ? AND is_active = 1 LIMIT 1;", column);
+        final String query = String.format("SELECT id,name,fcm_id, api_key FROM users WHERE %s = ? AND is_active = 1 LIMIT 1;", column);
         final java.sql.Connection con = Connection.getConnection();
         try {
             final PreparedStatement ps = con.prepareStatement(query);
@@ -39,9 +39,10 @@ public class Users extends BaseTable<User> {
 
             if (rs.first()) {
                 final String id = rs.getString(COLUMN_ID);
+                final String name = rs.getString(COLUMN_NAME);
                 final String fcmId = rs.getString(COLUMN_FCM_ID);
                 final String apiKey = rs.getString(COLUMN_API_KEY);
-                user = new User(id, null, null, null, fcmId, apiKey, true);
+                user = new User(id, name, null, null, fcmId, apiKey, true);
             }
 
             rs.close();

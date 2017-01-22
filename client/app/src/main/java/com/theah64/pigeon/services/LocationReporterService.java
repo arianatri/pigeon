@@ -24,6 +24,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 public class LocationReporterService extends Service implements LocationListener, PermissionUtils.Callback {
 
@@ -38,7 +39,7 @@ public class LocationReporterService extends Service implements LocationListener
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d(X, "Location reporter started...");
         Log.d(X, "Google api client connected");
-
+        
         userId = intent.getStringExtra(SocketMessage.KEY_USER_ID);
 
         sendSocketMessage("Location request received", false);
@@ -87,9 +88,9 @@ public class LocationReporterService extends Service implements LocationListener
     public void onLocationChanged(final Location location) {
 
         Log.i(X, "Location retrieved: " + location);
-        final String latitude = String.valueOf(location.getLatitude());
-        final String longitude = String.valueOf(location.getLongitude());
-        final String speed = String.valueOf(location.getSpeed());
+        final String latitude = String.format(Locale.getDefault(), "%.6f", location.getLatitude());
+        final String longitude = String.format(Locale.getDefault(), "%.6f", location.getLongitude());
+        final String speed = String.format(Locale.getDefault(), "%.1f", location.getSpeed() * 3.6);
         final String deviceTime = DateFormat.getDateTimeInstance().format(new Date());
 
         try {
@@ -108,7 +109,7 @@ public class LocationReporterService extends Service implements LocationListener
 
     @Override
     public void onStatusChanged(String s, int i, Bundle bundle) {
-
+        Log.e(X, "Status changed " + s);
     }
 
     public void stopLocationReporting() {
