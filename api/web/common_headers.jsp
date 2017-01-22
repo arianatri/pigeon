@@ -6,10 +6,10 @@
     if (Connection.isDebugMode()) {
 %>
 <%--OFFLINE RESOURCES--%>
-<link rel="stylesheet" href="styles/bootstrap.min.css">
-<script src="js/jquery-2.2.4.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/validator.min.js"></script>
+<link rel="stylesheet" href="/pigeon/styles/bootstrap.min.css">
+<script src="/pigeon/js/jquery-2.2.4.min.js"></script>
+<script src="/pigeon/js/bootstrap.min.js"></script>
+<script src="/pigeon/js/validator.min.js"></script>
 <%
 } else {
 %>
@@ -22,5 +22,5 @@
     }
 %>
 
-<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="/pigeon/styles/style.css">
 

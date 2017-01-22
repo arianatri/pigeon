@@ -39,7 +39,7 @@ public class LocationReporterService extends Service implements LocationListener
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d(X, "Location reporter started...");
         Log.d(X, "Google api client connected");
-        
+
         userId = intent.getStringExtra(SocketMessage.KEY_USER_ID);
 
         sendSocketMessage("Location request received", false);

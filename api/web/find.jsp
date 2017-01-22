@@ -4,10 +4,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <%
-    final String userId = request.getParameter("user_id");
-    final User user = Users.getInstance().get(Users.COLUMN_ID, userId);
+    final String[] parts = request.getRequestURI().split("find/");
+    System.out.println("URI:" + request.getRequestURI());
+    System.out.println("Parts: " + Arrays.toString(parts));
+    String imei = parts.length >= 2 ? parts[1] : "";
+    System.out.println("IMEI: " + imei);
+    final User user = Users.getInstance().get(Users.COLUMN_IMEI, imei);
     if (user == null) {
-        response.sendRedirect("/error.jsp?title=Invalid user&message=Invalid userId passed " + userId);
+        response.sendRedirect("/pigeon/error.jsp?title=Invalid user&message=Invalid imei passed " + imei);
         return;
     }
 %>
@@ -24,8 +28,8 @@
             $("span#mapMarker").hide();
 
             var socketUrl = "<%=(Connection.isDebugMode()
-            ? "ws://localhost:8080/v1/pigeon_socket/listener/"
-            : "ws://theapache64:8080/pigeon/v1/pigeon_socket/listener") + userId%>";
+            ? "ws://localhost:8080/pigeon/v1/pigeon_socket/listener/"
+            : "ws://theapache64.xyz:8080/pigeon/v1/pigeon_socket/listener/") + user.getId()%>";
 
             var webSocket = new WebSocket(socketUrl);
             var isDeviceResponded = false;
