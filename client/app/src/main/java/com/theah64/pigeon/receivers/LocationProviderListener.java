@@ -14,6 +14,11 @@ import com.theah64.pigeon.utils.NetworkUtils;
 import com.theah64.pigeon.utils.PermissionUtils;
 import com.theah64.pigeon.utils.WebSocketHelper;
 
+import org.json.JSONException;
+
+import java.io.IOException;
+import java.net.URISyntaxException;
+
 public class LocationProviderListener extends BroadcastReceiver implements PermissionUtils.Callback {
 
     private static final String X = LocationProviderListener.class.getSimpleName();
@@ -36,11 +41,11 @@ public class LocationProviderListener extends BroadcastReceiver implements Permi
         new APIRequestGateway(context, new APIRequestGateway.APIRequestGatewayCallback() {
             @Override
             public void onReadyToRequest(String apiKey, String userId) {
-
-                final Intent locReqIntent = new Intent(context, LocationReporterService.class);
-                locReqIntent.putExtra(SocketMessage.KEY_USER_ID, userId);
-
-                context.startService(locReqIntent);
+                try {
+                    WebSocketHelper.getInstance(context, userId).send(new SocketMessage("Location provider changed"));
+                } catch (URISyntaxException | IOException | JSONException e) {
+                    e.printStackTrace();
+                }
             }
 
             @Override
