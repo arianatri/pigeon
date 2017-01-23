@@ -193,7 +193,7 @@ public class PigeonSocket {
 
                 //Teller closed, remove every listener session
                 for (final Session listener : listenerSessions.get(userId)) {
-                    listener.getBasicRemote().sendText(new Response(PigeonSocketException.ERROR_CODE_TELLER_CLOSED, "Teller closed, so do the listeners.").getResponse());
+                    listener.getBasicRemote().sendText(new Response(PigeonSocketException.ERROR_CODE_TELLER_CLOSED, "Device gone offline").getResponse());
                 }
 
             } else {

@@ -31,7 +31,7 @@ a:hover {
     padding: 0;
 }
 
-.m0p0{
+.m0p0 {
     margin: 0;
     padding: 0;
 }
@@ -43,7 +43,7 @@ div#mainContainer {
     width: 100%;
 }
 
-div#main{
+div#main {
     background-color: rgba(255, 255, 255, 0.57);
     height: 104px;
     width: 100%;
@@ -51,7 +51,7 @@ div#main{
     border: 1px solid rgba(0, 0, 0, 0.26);
 }
 
-div#statusSignal{
+div#statusSignal {
     width: 10px;
     height: 10px;
     border-radius: 10px;
@@ -60,11 +60,11 @@ div#statusSignal{
     left: 39px;
 }
 
-.statusGood{
+.statusGood {
     background-color: #4CAF50;
 }
 
-.statusBad{
+.statusBad {
     background-color: #F44336;
 }
 
@@ -73,7 +73,7 @@ span#mapMarker {
     top: 42px;
 }
 
-p#status1{
+p#status1 {
     font-size: 15px;
     margin-top: 6px;
     font-style: italic;
@@ -84,25 +84,49 @@ h3#speed {
     margin: 0;
 }
 
-span#mapMarker{
+span#mapMarker {
     cursor: pointer;
     position: absolute;
-    top: 37px;
+    top: 40px;
     right: 53px;
+    font-size: 18px;
 }
 
 @keyframes blink {
-    0% { color: #4CAF50; }
-    100% { color: #F44336; }
+    0% {
+        color: #4CAF50;
+    }
+    100% {
+        color: #F44336;
+    }
 }
 
 @-webkit-keyframes blink {
-    0% { color: #4CAF50; }
-    100% { color: #F44336; }
+    0% {
+        color: #4CAF50;
+    }
+    100% {
+        color: #F44336;
+    }
 }
 
 .blink {
     -webkit-animation: blink 1s linear infinite;
     -moz-animation: blink 1s linear infinite;
     animation: blink 1s linear infinite;
+}
+
+span#mapMagnet {
+    position: absolute;
+    top: 43px;
+    left: 96px;
+    cursor: pointer;
+}
+
+.inactive {
+    color: #9a9a9a;
+}
+
+.active {
+    color: #3b3b3b;
 }

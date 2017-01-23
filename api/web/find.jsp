@@ -24,9 +24,6 @@
 
         $(document).ready(function () {
 
-            $("h3#speed span").hide();
-            $("span#mapMarker").hide();
-
             var socketUrl = "<%=(Connection.isDebugMode()
             ? "ws://localhost:8080/pigeon/v1/pigeon_socket/listener/"
             : "ws://theapache64.xyz:8080/pigeon/v1/pigeon_socket/listener/") + user.getId()%>";
@@ -40,6 +37,17 @@
             var poly;
             var marker;
             var gLatLon;
+            var isMagnet = false;
+
+            $("span#mapMagnet").click(function () {
+                if (isMagnet) {
+                    isMagnet = false;
+                    $(this).addClass("inactive").removeClass("active");
+                } else {
+                    isMagnet = true;
+                    $(this).addClass("active").removeClass("inactive");
+                }
+            });
 
             updateStatus("Opening socket...");
 
@@ -87,6 +95,10 @@
                                 $("span#mapMarker").fadeIn(500);
                             }
 
+                            if (!$("span#mapMagnet").is(":visible")) {
+                                $("span#mapMagnet").fadeIn(500);
+                            }
+
 
                             lastLat = joData.lat;
                             lastLon = joData.lon;
@@ -122,8 +134,17 @@
                                 map.panTo(gLatLon);
                             }
 
+                            if (isMagnet) {
+                                map.panTo(gLatLon);
+                            }
+
                             marker.setMap(map);
                             poly.getPath().push(gLatLon);
+
+                            google.maps.event.addListener(marker, 'click', function () {
+                                map.setZoom(15);
+                                map.setCenter(marker.getPosition());
+                            });
 
                         } else if (joData.type == 'satellite') {
                             $("h6#status2").text("");
@@ -198,12 +219,13 @@
                     <div class="col-md-8" style="text-align: center">
                         <p id="status1"></p>
                         <h3 id="speed"><strong id="strongSpeed"></strong><span
-                                style="font-size: 16px;  color: #949494;">kmph</span></h3>
+                                style="display:none;font-size: 16px;  color: #949494;">kmph</span></h3>
                         <h6 id="status2"></h6>
                     </div>
                     <!--VIEW IN MAP BUTTON-->
                     <div class="col-md-2" style="text-align: center">
-                        <span id="mapMarker" style="font-size: 28px" class="glyphicon glyphicon-map-marker"></span>
+                        <span id="mapMarker" style="display: none;" class="glyphicon glyphicon-map-marker"></span>
+                        <span id="mapMagnet" style="display: none;" class="glyphicon glyphicon-magnet inactive"></span>
                     </div>
                 </div>
             </div>

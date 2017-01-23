@@ -87,7 +87,6 @@ public class LocationReporterService extends Service implements LocationListener
     @Override
     public void onLocationChanged(final Location location) {
 
-        Log.i(X, "Location retrieved: " + location);
         final String latitude = String.format(Locale.getDefault(), "%.6f", location.getLatitude());
         final String longitude = String.format(Locale.getDefault(), "%.6f", location.getLongitude());
         final String speed = String.format(Locale.getDefault(), "%.1f", location.getSpeed() * 3.6);

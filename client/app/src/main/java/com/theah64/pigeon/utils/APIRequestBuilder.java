@@ -14,7 +14,7 @@ public class APIRequestBuilder {
 
 
 
-    private static final String BASE_URL = App.IS_DEBUG_MODE ? "http://192.168.43.147:8080/v1" : "http://theapache64.xyz:8080/pigeon/v1";
+    private static final String BASE_URL = App.IS_DEBUG_MODE ? "http://192.168.43.147:8080/pigeon/v1" : "http://theapache64.xyz:8080/pigeon/v1";
 
     private static final String X = APIRequestBuilder.class.getSimpleName();
     private static final String KEY_AUTHORIZATION = "Authorization";
