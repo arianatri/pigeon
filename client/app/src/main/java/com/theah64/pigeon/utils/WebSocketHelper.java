@@ -61,6 +61,7 @@ public class WebSocketHelper {
                     try {
                         final Response response = new Response(message);
 
+
                     } catch (Response.ResponseException e) {
                         e.printStackTrace();
                         Log.d(X, "Trying to stop location");

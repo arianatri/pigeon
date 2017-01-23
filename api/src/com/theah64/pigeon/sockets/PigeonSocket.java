@@ -64,7 +64,7 @@ public class PigeonSocket {
                     System.out.println("Total listener for " + userId + " - " + listenerSessions.get(userId).size());
                     System.out.println("Total tellers : " + tellerSessions.size());
 
-                    sendTellerPing(user, session);
+                    sendTellerPing(user);
 
                 } else if (type.equals(TYPE_TELLER)) {
                     //Connection made by an android device normally - new connection
@@ -89,7 +89,7 @@ public class PigeonSocket {
                         }
 
                         //Sending teller a location request
-                        sendTellerPing(user, session);
+                        sendTellerPing(user);
 
                     } else {
                         //No listener for the teller, so telling a story to the air is meaning less. therefore, closing the teller
@@ -118,7 +118,7 @@ public class PigeonSocket {
         }
     }
 
-    private void sendTellerPing(final User user, final Session session) throws IOException, PigeonSocketException, JSONException {
+    private void sendTellerPing(final User user) throws IOException, PigeonSocketException, JSONException {
 
         //Checking if there's a teller session
         System.out.println("Sending teller ping...");
@@ -133,7 +133,11 @@ public class PigeonSocket {
         final boolean isEverythingOk = joFcmResp != null && joFcmResp.getInt("failure") == 0;
 
         if (isEverythingOk) {
-            session.getBasicRemote().sendText(new Response("Location request sent", null).getResponse());
+            if (listenerSessions.get(user.getId()) != null && !listenerSessions.get(user.getId()).isEmpty()) {
+                for (final Session listener : listenerSessions.get(user.getId())) {
+                    listener.getBasicRemote().sendText(new Response("Location request sent", null).getResponse());
+                }
+            }
         } else {
             throw new PigeonSocketException("Failed to send location request", PigeonSocketException.ERROR_CODE_FCM_FIRE_FAILED);
         }
@@ -148,7 +152,7 @@ public class PigeonSocket {
 
         if (type.equals(TYPE_TELLER)) {
 
-            if (listenerSessions.get(userId) != null) {
+            if (listenerSessions.get(userId) != null && !listenerSessions.get(userId).isEmpty()) {
 
                 //Teller got something to tell to the listener
                 for (final Session listener : listenerSessions.get(userId)) {
@@ -157,6 +161,7 @@ public class PigeonSocket {
 
             } else {
                 System.out.println("No listener found for teller : " + userId);
+                session.getBasicRemote().sendText(new Response(PigeonSocketException.ERROR_CODE_NO_LISTENER_FOUND, "No listener found for " + userId).getResponse());
             }
 
         } else {
@@ -187,7 +192,7 @@ public class PigeonSocket {
             //Remove teller session
             tellerSessions.remove(userId);
 
-            if (listenerSessions.get(userId) != null) {
+            if (listenerSessions.get(userId) != null && !listenerSessions.isEmpty()) {
 
                 System.out.println("Notifying listeners about teller death");
 

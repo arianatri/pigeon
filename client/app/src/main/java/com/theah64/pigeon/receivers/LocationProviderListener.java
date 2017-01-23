@@ -29,7 +29,6 @@ public class LocationProviderListener extends BroadcastReceiver implements Permi
 
     @Override
     public void onReceive(final Context context, Intent intent) {
-        Log.d(X, "Location provider changed : " + intent);
         this.context = context;
         new PermissionUtils(context, this, null).begin();
     }
@@ -42,7 +41,12 @@ public class LocationProviderListener extends BroadcastReceiver implements Permi
             @Override
             public void onReadyToRequest(String apiKey, String userId) {
                 try {
-                    WebSocketHelper.getInstance(context, userId).send(new SocketMessage("Location provider changed"));
+                    final LocationManager locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+                    if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+                        WebSocketHelper.getInstance(context, userId).send(new SocketMessage("GPS enabled"));
+                    } else {
+                        WebSocketHelper.getInstance(context, userId).send(new SocketMessage("GPS disabled"));
+                    }
                 } catch (URISyntaxException | IOException | JSONException e) {
                     e.printStackTrace();
                 }

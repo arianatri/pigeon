@@ -108,7 +108,6 @@ public class LocationReporterService extends Service implements LocationListener
 
     @Override
     public void onStatusChanged(String s, int i, Bundle bundle) {
-        Log.e(X, "Status changed " + s);
     }
 
     public void stopLocationReporting() {
@@ -119,7 +118,6 @@ public class LocationReporterService extends Service implements LocationListener
         }
 
         Log.d(X, "Removing updated");
-
         locationManager.removeUpdates(this);
     }
 

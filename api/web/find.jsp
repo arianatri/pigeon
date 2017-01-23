@@ -152,7 +152,10 @@
                             $("h3#speed span").fadeOut(500);
                             $("p#status1").addClass("blink");
                             $("span#mapMarker").fadeOut(500);
-
+                        } else {
+                            if ($("p#status1").hasClass("blink")) {
+                                $("p#status1").removeClass("blink");
+                            }
                         }
                     }
 
