@@ -41,6 +41,7 @@ public class LocationRequestReceiverService extends FirebaseMessagingService {
                     }
 
                     @Override
+
                     public void onFailed(String reason) {
 
                     }
