@@ -7,10 +7,7 @@ import android.location.LocationManager;
 import android.util.Log;
 
 import com.theah64.pigeon.model.SocketMessage;
-import com.theah64.pigeon.services.LocationReporterService;
-import com.theah64.pigeon.services.firebase.LocationRequestReceiverService;
 import com.theah64.pigeon.utils.APIRequestGateway;
-import com.theah64.pigeon.utils.NetworkUtils;
 import com.theah64.pigeon.utils.PermissionUtils;
 import com.theah64.pigeon.utils.WebSocketHelper;
 

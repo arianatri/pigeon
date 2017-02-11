@@ -12,7 +12,6 @@ import android.os.IBinder;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 
-
 import com.theah64.pigeon.model.SocketMessage;
 import com.theah64.pigeon.utils.App;
 import com.theah64.pigeon.utils.PermissionUtils;
@@ -40,10 +39,12 @@ public class LocationReporterService extends Service implements LocationListener
         Log.d(X, "Location reporter started...");
         Log.d(X, "Google api client connected");
 
-        userId = intent.getStringExtra(SocketMessage.KEY_USER_ID);
+        if (intent != null) {
+            userId = intent.getStringExtra(SocketMessage.KEY_USER_ID);
 
-        sendSocketMessage("Location request received", false);
-        new PermissionUtils(this, this, null).begin();
+            sendSocketMessage("Location request received", false);
+            new PermissionUtils(this, this, null).begin();
+        }
         return START_STICKY;
     }
 

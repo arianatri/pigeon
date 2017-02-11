@@ -9,7 +9,6 @@ import com.theah64.pigeon.model.SocketMessage;
 import com.theah64.pigeon.services.LocationReporterService;
 import com.theah64.pigeon.utils.APIRequestGateway;
 
-
 import java.util.Map;
 
 public class LocationRequestReceiverService extends FirebaseMessagingService {
@@ -47,8 +46,6 @@ public class LocationRequestReceiverService extends FirebaseMessagingService {
                     }
                 });
 
-            } else {
-                //TODO: Manage [everything-else] here.
             }
         }
     }
