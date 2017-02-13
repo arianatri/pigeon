@@ -64,7 +64,7 @@ public class GetAPIKeyServlet extends AdvancedBaseServlet {
 
             final String apiKey = RandomString.getNewApiKey(API_KEY_LENGTH);
 
-            user = new User(null, name, imei, deviceHash, fcmId, apiKey, true);
+            user = new User(null, name, imei, deviceHash, fcmId, apiKey, fcmId != null, true);
             final String empId = usersTable.addv3(user);
             user.setId(empId);
         }

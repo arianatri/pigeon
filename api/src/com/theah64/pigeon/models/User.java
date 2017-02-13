@@ -19,16 +19,21 @@ public class User {
     private final String deviceHash;
     private final String fcmId;
     private final String apiKey;
-    private final boolean isActive;
+    private final boolean hasFcm, isActive;
 
-    public User(String id, String name, String imei, String deviceHash, String fcmId, String apiKey, boolean isActive) {
+    public User(String id, String name, String imei, String deviceHash, String fcmId, String apiKey, boolean hasFcm, boolean isActive) {
         this.id = id;
         this.name = name;
         this.imei = imei;
         this.deviceHash = deviceHash;
         this.fcmId = fcmId;
         this.apiKey = apiKey;
+        this.hasFcm = hasFcm;
         this.isActive = isActive;
+    }
+
+    public boolean hasFcm() {
+        return hasFcm;
     }
 
     public String getId() {
