@@ -7,13 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8511bf33-240a-4944-8070-15724e501ab8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/status.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/theah64/pigeon/database/tables/Users.java" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/database/tables/Users.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/theah64/pigeon/models/User.java" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/models/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/theah64/pigeon/servlets/GetAPIKeyServlet.java" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/servlets/GetAPIKeyServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/theah64/pigeon/database/Connection.java" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/database/Connection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/theah64/pigeon/sockets/PigeonSocket.java" afterPath="$PROJECT_DIR$/src/com/theah64/pigeon/sockets/PigeonSocket.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/META-INF/context.xml" afterPath="$PROJECT_DIR$/web/META-INF/context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client/.idea/misc.xml" afterPath="$PROJECT_DIR$/../client/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/find.jsp" afterPath="$PROJECT_DIR$/web/find.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,11 +27,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="find.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="find.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/find.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2295">
-              <caret line="153" column="61" lean-forward="false" selection-start-line="153" selection-start-column="61" selection-end-line="153" selection-end-column="61" />
+            <state relative-caret-position="75">
+              <caret line="168" column="30" lean-forward="true" selection-start-line="168" selection-start-column="30" selection-end-line="168" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -42,8 +40,8 @@
       <file leaf-file-name="PigeonSocket.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/theah64/pigeon/sockets/PigeonSocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="631">
-              <caret line="176" column="54" lean-forward="true" selection-start-line="176" selection-start-column="54" selection-end-line="176" selection-end-column="54" />
+            <state relative-caret-position="473">
+              <caret line="142" column="30" lean-forward="false" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -114,11 +112,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Connection.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Connection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/theah64/pigeon/database/Connection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="14" column="50" lean-forward="false" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+            <state relative-caret-position="-30">
+              <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -128,7 +126,7 @@
         <entry file="file://$PROJECT_DIR$/web/META-INF/context.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+              <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -157,6 +155,7 @@
       <find>Response</find>
       <find>null</find>
       <find>sendTellerPing</find>
+      <find>isDeviceResponded</find>
     </findStrings>
     <replaceStrings>
       <replace>pigeon</replace>
@@ -192,14 +191,14 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/common_headers.jsp" />
         <option value="$PROJECT_DIR$/web/styles/style.css" />
-        <option value="$PROJECT_DIR$/web/find.jsp" />
-        <option value="$PROJECT_DIR$/src/com/theah64/pigeon/sockets/PigeonSocket.java" />
         <option value="$PROJECT_DIR$/src/com/theah64/pigeon/models/User.java" />
         <option value="$PROJECT_DIR$/src/com/theah64/pigeon/servlets/GetAPIKeyServlet.java" />
         <option value="$PROJECT_DIR$/src/com/theah64/pigeon/database/tables/Users.java" />
         <option value="$PROJECT_DIR$/web/status.jsp" />
         <option value="$PROJECT_DIR$/web/META-INF/context.xml" />
         <option value="$PROJECT_DIR$/src/com/theah64/pigeon/database/Connection.java" />
+        <option value="$PROJECT_DIR$/src/com/theah64/pigeon/sockets/PigeonSocket.java" />
+        <option value="$PROJECT_DIR$/web/find.jsp" />
       </list>
     </option>
   </component>
@@ -298,6 +297,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pigeon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pigeon_api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pigeon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sockets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -430,7 +451,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="context&#9;FILE&#9;file:///home/theapache64/Documents/projects/pigeon/api/web/META-INF/context.xml&#10;Socket&#9;FILE&#9;file:///home/theapache64/Documents/projects/pigeon/api/src/com/theah64/pigeon/sockets/PigeonSocket.java&#10;sty&#9;FILE&#9;file:///home/theapache64/Documents/projects/pigeon/api/web/styles/style.css&#10;con&#9;FILE&#9;file:///home/theapache64/Documents/projects/pigeon/api/web/META-INF/context.xml&#10;Connec&#9;FILE&#9;file:///home/theapache64/Documents/projects/pigeon/api/src/com/theah64/pigeon/database/Connection.java&#10;Conne&#9;FILE&#9;file:///home/theapache64/Documents/projects/pigeon/api/src/com/theah64/pigeon/database/Connection.java&#10;contex&#9;FILE&#9;file:///home/theapache64/Documents/projects/pigeon/api/web/META-INF/context.xml&#10;cont&#9;FILE&#9;file:///home/theapache64/Documents/projects/pigeon/api/web/META-INF/context.xml" />
+    <property name="SearchEverywhereHistoryKey" value="Conn&#9;FILE&#9;file:///home/theapache64/Documents/projects/pigeon/api/src/com/theah64/pigeon/database/Connection.java&#10;context&#9;FILE&#9;file:///home/theapache64/Documents/projects/pigeon/api/web/META-INF/context.xml&#10;Socket&#9;FILE&#9;file:///home/theapache64/Documents/projects/pigeon/api/src/com/theah64/pigeon/sockets/PigeonSocket.java&#10;sty&#9;FILE&#9;file:///home/theapache64/Documents/projects/pigeon/api/web/styles/style.css&#10;con&#9;FILE&#9;file:///home/theapache64/Documents/projects/pigeon/api/web/META-INF/context.xml&#10;Connec&#9;FILE&#9;file:///home/theapache64/Documents/projects/pigeon/api/src/com/theah64/pigeon/database/Connection.java&#10;Conne&#9;FILE&#9;file:///home/theapache64/Documents/projects/pigeon/api/src/com/theah64/pigeon/database/Connection.java&#10;contex&#9;FILE&#9;file:///home/theapache64/Documents/projects/pigeon/api/web/META-INF/context.xml&#10;cont&#9;FILE&#9;file:///home/theapache64/Documents/projects/pigeon/api/web/META-INF/context.xml" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
@@ -939,12 +960,12 @@
       <workItem from="1485137857968" duration="2389000" />
       <workItem from="1485186827365" duration="3130000" />
       <workItem from="1485195964903" duration="3093000" />
-      <workItem from="1486995127861" duration="2343000" />
+      <workItem from="1486995127861" duration="4296000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53975000" />
+    <option name="totallyTimeSpent" value="55928000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="51" y="24" width="1315" height="744" extended-state="6" />
@@ -1326,22 +1347,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/find.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2295">
-          <caret line="153" column="61" lean-forward="false" selection-start-line="153" selection-start-column="61" selection-end-line="153" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/theah64/pigeon/sockets/PigeonSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="176" column="54" lean-forward="true" selection-start-line="176" selection-start-column="54" selection-end-line="176" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/theah64/pigeon/database/tables/BaseTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1335">
@@ -1398,15 +1403,31 @@
     <entry file="file://$PROJECT_DIR$/web/META-INF/context.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+          <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/theah64/pigeon/database/Connection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="50" lean-forward="false" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+        <state relative-caret-position="-30">
+          <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/theah64/pigeon/sockets/PigeonSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="142" column="30" lean-forward="false" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/find.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="168" column="30" lean-forward="true" selection-start-line="168" selection-start-column="30" selection-end-line="168" selection-end-column="30" />
           <folding />
         </state>
       </provider>

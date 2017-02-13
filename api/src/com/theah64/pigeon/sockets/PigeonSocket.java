@@ -132,6 +132,7 @@ public class PigeonSocket {
 
         final boolean isEverythingOk = joFcmResp != null && joFcmResp.getInt("failure") == 0;
 
+
         if (isEverythingOk) {
             if (listenerSessions.get(user.getId()) != null && !listenerSessions.get(user.getId()).isEmpty()) {
                 for (final Session listener : listenerSessions.get(user.getId())) {
@@ -139,7 +140,8 @@ public class PigeonSocket {
                 }
             }
         } else {
-            throw new PigeonSocketException("Failed to send location request", PigeonSocketException.ERROR_CODE_FCM_FIRE_FAILED);
+            final String error = joFcmResp.getJSONArray("results").getJSONObject(0).getString("error");
+            throw new PigeonSocketException("Failed to send location request : " + error, PigeonSocketException.ERROR_CODE_FCM_FIRE_FAILED);
         }
 
     }

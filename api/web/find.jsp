@@ -166,6 +166,7 @@
             webSocket.onclose = function (evnt) {
                 updateStatus("ERROR: " + evnt.reason);
                 console.log(evnt);
+                isDeviceResponded = true;
                 setStatusBad();
             };
 

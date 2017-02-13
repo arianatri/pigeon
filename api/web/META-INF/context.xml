@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
-    <!--<Resource
+    <Resource
             name="jdbc/pigeonLocal"
             auth="Container"
             type="javax.sql.DataSource"
@@ -20,9 +20,9 @@
             password="mike"
             driverClassName="com.mysql.jdbc.Driver"
             url="jdbc:mysql://localhost:3306/pigeon?allowMultiQueries=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8"
-    />-->
+    />
 
-    <Resource
+    <!--<Resource
             name="jdbc/pigeonRemote"
             auth="Container"
             type="javax.sql.DataSource"
@@ -42,5 +42,5 @@
             removeAbandonedTimeout="233"
             driverClassName="com.mysql.jdbc.Driver"
             url="jdbc:mysql://theapache64.xyz:3306/pigeon?allowMultiQueries=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8"
-    />
+    />-->
 </Context>
