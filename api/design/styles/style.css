@@ -1,0 +1,78 @@
+body, html {
+    background-color: #f5f5f5;
+    height: 100%;
+}
+
+.content-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.full {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.m0p0{
+    margin: 0;
+    padding: 0;
+}
+
+div#mainContainer {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    height: 120px;
+    width: 100%;
+}
+
+div#main{
+    background-color: rgba(255, 255, 255, 0.57);
+    height: 120px;
+    width: 100%;
+    border-radius: 62px;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+}
+
+div#statusSignal{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 51px;
+    left: 39px;
+}
+
+.statusGood{
+    background-color: #4CAF50;
+}
+
+.statusBad{
+    background-color: #F44336;
+}
+
+span#mapMarker {
+    position: absolute;
+    top: 42px;
+}
+
+p#status1{
+    font-size: 12px;
+    margin-top: 6px;
+    font-style: italic;
+    color: #969696;
+}
+
+h3#speed {
+    margin: 0;
+}
+
+span#mapMarker{
+    cursor: pointer;
+}
