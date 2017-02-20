@@ -132,7 +132,6 @@ public class PigeonSocket {
 
         final boolean isEverythingOk = joFcmResp != null && joFcmResp.getInt("failure") == 0;
 
-
         if (isEverythingOk) {
             if (listenerSessions.get(user.getId()) != null && !listenerSessions.get(user.getId()).isEmpty()) {
                 for (final Session listener : listenerSessions.get(user.getId())) {
@@ -155,6 +154,8 @@ public class PigeonSocket {
         if (type.equals(TYPE_TELLER)) {
 
             if (listenerSessions.get(userId) != null && !listenerSessions.get(userId).isEmpty()) {
+
+                //TODO : Got to save each location here
 
                 //Teller got something to tell to the listener
                 for (final Session listener : listenerSessions.get(userId)) {
