@@ -1,5 +1,5 @@
-<%@ page import="com.theah64.pigeon.models.User" %>
 <%@ page import="com.theah64.pigeon.database.tables.Users" %>
+<%@ page import="com.theah64.pigeon.models.User" %>
 <%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: theapache64

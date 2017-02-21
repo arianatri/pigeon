@@ -155,8 +155,6 @@ public class PigeonSocket {
 
             if (listenerSessions.get(userId) != null && !listenerSessions.get(userId).isEmpty()) {
 
-                //TODO : Got to save each location here
-
                 //Teller got something to tell to the listener
                 for (final Session listener : listenerSessions.get(userId)) {
                     listener.getBasicRemote().sendText(data);
