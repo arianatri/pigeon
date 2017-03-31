@@ -30,7 +30,7 @@ CREATE TABLE locations(
 	lat         VARCHAR(20)  NOT NULL,
 	lon         VARCHAR(20)  NOT NULL,
 	speed       BIGINT NOT NULL,
-	device_timestamp BIGINT NOT NULL,
+	device_time TEXT NOT NULL,
 	created_at  TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (id),
 	FOREIGN KEY (trip_id) REFERENCES trips(id) ON UPDATE CASCADE ON DELETE  CASCADE

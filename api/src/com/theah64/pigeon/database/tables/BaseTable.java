@@ -52,8 +52,14 @@ public class BaseTable<T> {
         throw new IllegalArgumentException(ERROR_MESSAGE_UNDEFINED_METHOD);
     }
 
-    public void add(T newInstance) throws InsertFailedException {
+    public void add(T newInstance) throws SQLException {
         throw new IllegalArgumentException(ERROR_MESSAGE_UNDEFINED_METHOD);
+    }
+
+    public void manageError(String errorMsg) throws SQLException {
+        if (errorMsg != null) {
+            throw new SQLException(errorMsg);
+        }
     }
 
     public static class InsertFailedException extends SQLException {
