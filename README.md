@@ -6,3 +6,4 @@ A real time android device tracker
 - Magnet mode (DONE)
 - Tap marker to zoom (DONE)
 
+#live
