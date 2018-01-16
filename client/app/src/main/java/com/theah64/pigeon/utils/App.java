@@ -2,6 +2,9 @@ package com.theah64.pigeon.utils;
 
 import android.app.Application;
 
+import com.theah64.bugmailer.core.BugMailer;
+import com.theah64.bugmailer.core.BugMailerConfig;
+import com.theah64.bugmailer.exceptions.BugMailerException;
 import com.theah64.pigeon.model.SocketMessage;
 import com.theah64.pigeon.services.LocationReporterService;
 
@@ -23,6 +26,12 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        try {
+            BugMailer.init(this, new BugMailerConfig("theapache64@gmail.com"));
+        } catch (BugMailerException e) {
+            e.printStackTrace();
+        }
 
         new APIRequestGateway(this, new APIRequestGateway.APIRequestGatewayCallback() {
             @Override

@@ -2,7 +2,7 @@ package com.theah64.pigeon.utils;
 
 import android.support.annotation.StringRes;
 
-import com.google.firebase.crash.FirebaseCrash;
+import com.theah64.bugmailer.core.BugMailer;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -32,7 +32,7 @@ public class Response {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            FirebaseCrash.report(e);
+            BugMailer.report(e);
             throw e;
         }
 

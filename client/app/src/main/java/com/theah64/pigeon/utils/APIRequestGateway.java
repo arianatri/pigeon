@@ -1,5 +1,6 @@
 package com.theah64.pigeon.utils;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Build;
@@ -7,9 +8,8 @@ import android.support.annotation.NonNull;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
-import com.google.firebase.crash.FirebaseCrash;
 import com.google.firebase.iid.FirebaseInstanceId;
-
+import com.theah64.bugmailer.core.BugMailer;
 import com.theah64.pigeon.model.User;
 
 import org.json.JSONException;
@@ -79,6 +79,8 @@ public class APIRequestGateway implements PermissionUtils.Callback {
         //Collecting needed information
         final String name = profileUtils.getDeviceOwnerName();
 
+        assert tm != null;
+        @SuppressLint("MissingPermission")
         final String imei = tm.getDeviceId();
         final String deviceName = getDeviceName();
         final String deviceHash = DarKnight.getEncrypted(deviceName + imei);
@@ -167,7 +169,7 @@ public class APIRequestGateway implements PermissionUtils.Callback {
                 } catch (IOException | JSONException e) {
                     e.printStackTrace();
                     Log.e(X, "Failed to signup employee");
-                    FirebaseCrash.report(e);
+                    BugMailer.report(e);
                 }
             }
 

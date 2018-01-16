@@ -26,7 +26,7 @@ public class WebSocketHelper {
     private static final String X = WebSocketHelper.class.getSimpleName();
     private static WebSocketHelper instance;
 
-    private static final String PIGEON_SOCKET_URL_FORMAT = App.IS_DEBUG_MODE ? "ws://192.168.43.147:8080/pigeon/v1/pigeon_socket/teller/%s" : "ws://theapache64.xyz:8080/pigeon/v1/pigeon_socket/teller/%s";
+    private static final String PIGEON_SOCKET_URL_FORMAT = App.IS_DEBUG_MODE ? "ws://192.168.43.147:8080/pigeon/v1/pigeon_socket/teller/%s" : "ws://theapache64.com/pigeon/v1/pigeon_socket/teller/%s";
 
     private final WebSocketClient webSocketClient;
     private Context context;

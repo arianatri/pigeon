@@ -26,7 +26,7 @@
 
             var socketUrl = "<%=(Connection.isDebugMode()
             ? "ws://localhost:8080/pigeon/v1/pigeon_socket/listener/"
-            : "ws://theapache64.xyz:8080/pigeon/v1/pigeon_socket/listener/") + user.getId()%>";
+            : "ws://theapache64.com/pigeon/v1/pigeon_socket/listener/") + user.getId()%>";
 
             var webSocket = new WebSocket(socketUrl);
             var isDeviceResponded = false;
