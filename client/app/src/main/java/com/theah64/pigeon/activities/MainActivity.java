@@ -43,12 +43,13 @@ public class MainActivity extends PermissionActivity {
             new APIRequestGateway(this, new APIRequestGateway.APIRequestGatewayCallback() {
                 @Override
                 public void onReadyToRequest(String apiKey, final String userId) {
+
                     if (!PrefUtils.getInstance(MainActivity.this).getBoolean(User.KEY_IS_FCM_SYNCED)) {
                         new FCMSynchronizer(MainActivity.this, apiKey).execute();
                     }
 
                     try {
-                        WebSocketHelper.getInstance(MainActivity.this, userId).send(new SocketMessage("ETS Client initialized"));
+                        WebSocketHelper.getInstance(MainActivity.this, userId).send(new SocketMessage("Pigeon initialized"));
                     } catch (URISyntaxException | IOException | JSONException e) {
                         e.printStackTrace();
                     }
