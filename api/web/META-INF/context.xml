@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
-
-
     <Resource
             name="jdbc/pigeon"
             auth="Container"
@@ -21,7 +19,6 @@
             removeAbandoned="true"
             removeAbandonedTimeout="233"
             driverClassName="com.mysql.jdbc.Driver"
-            url="jdbc:mysql://theapache64.com/pigeon?allowMultiQueries=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8"
+            url="jdbc:mysql://localhost:3306/pigeon?allowMultiQueries=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8"
     />
-
 </Context>

@@ -1,6 +1,8 @@
 package com.theah64.pigeon.services;
 
 import android.Manifest;
+import android.app.Notification;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -10,8 +12,11 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.NotificationCompat;
 import android.util.Log;
 
+import com.theah64.pigeon.R;
+import com.theah64.pigeon.activities.MainActivity;
 import com.theah64.pigeon.model.SocketMessage;
 import com.theah64.pigeon.utils.App;
 import com.theah64.pigeon.utils.PermissionUtils;
@@ -32,6 +37,24 @@ public class LocationReporterService extends Service implements LocationListener
     private LocationManager locationManager;
 
     public LocationReporterService() {
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        Intent notificationIntent = new Intent(this, MainActivity.class);
+
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0,
+                notificationIntent, 0);
+
+        Notification notification = new NotificationCompat.Builder(this)
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setContentTitle("Pigeon")
+                .setContentText("Getting location...")
+                .setContentIntent(pendingIntent).build();
+
+        startForeground(1337, notification);
     }
 
     @Override
@@ -118,8 +141,16 @@ public class LocationReporterService extends Service implements LocationListener
             return;
         }
 
+        stopForeground(true);
+
         Log.d(X, "Removing updated");
         locationManager.removeUpdates(this);
+    }
+
+    @Override
+    public void onDestroy() {
+        stopForeground(true);
+        super.onDestroy();
     }
 
     @Override

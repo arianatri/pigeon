@@ -33,10 +33,10 @@ public class MainActivity extends PermissionActivity {
 
     private void doNormalWork() {
 
-        PackageManager p = getPackageManager();
+       /* PackageManager p = getPackageManager();
         ComponentName componentName = new ComponentName(this, MainActivity.class);
         p.setComponentEnabledSetting(componentName, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
-
+*/
 
         if (NetworkUtils.hasNetwork(this)) {
 
@@ -64,7 +64,7 @@ public class MainActivity extends PermissionActivity {
 
         }
 
-        finish();
+        // finish();
 
     }
 
