@@ -1,6 +1,7 @@
 package com.theapache64.pigeon.di.modules
 
 import com.theapache64.pigeon.ui.activities.main.MainActivity
+import com.theapache64.pigeon.ui.activities.splash.SplashActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -8,6 +9,9 @@ import dagger.android.ContributesAndroidInjector
 abstract class BuildersModule {
 
     @ContributesAndroidInjector
-    abstract fun bindMainActivity(): MainActivity
+    abstract fun getSplashActivity(): SplashActivity
+
+    @ContributesAndroidInjector
+    abstract fun getMainActivity(): MainActivity
 
 }

@@ -10,8 +10,9 @@ import dagger.multibindings.IntoMap
 
 @Module(includes = [BaseViewModelModule::class])
 abstract class ViewModelModule {
+
     @Binds
     @IntoMap
     @ViewModelKey(MainViewModel::class)
-    abstract fun bindSplashViewModel(viewModel: MainViewModel): ViewModel
+    abstract fun bindMainViewModel(viewModel: MainViewModel): ViewModel
 }
