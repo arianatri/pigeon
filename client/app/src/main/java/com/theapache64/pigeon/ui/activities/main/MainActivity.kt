@@ -1,19 +1,34 @@
-package com.theapache64.pigeon
+package com.theapache64.pigeon.ui.activities.main
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu
 import android.view.MenuItem
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
+import com.theapache64.pigeon.R
+import com.theapache64.twinkill.utils.extensions.toast
+import dagger.android.AndroidInjection
 
 import kotlinx.android.synthetic.main.activity_main.*
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
+    @Inject
+    lateinit var factory: ViewModelProvider.Factory
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        AndroidInjection.inject(this)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+
+        val viewModel = ViewModelProviders.of(this, factory).get(MainViewModel::class.java)
+
+        toast(viewModel.toString())
 
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
