@@ -2,4 +2,7 @@
     <string name="app_name">pigeon</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_log_in">LogInActivity</string>
+    <string name="hint_imei">IMEI</string>
+    <string name="label_start">START</string>
 </resources>

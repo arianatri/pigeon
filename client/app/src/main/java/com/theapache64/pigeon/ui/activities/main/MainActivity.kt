@@ -1,5 +1,7 @@
 package com.theapache64.pigeon.ui.activities.main
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +18,13 @@ import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
 class MainActivity : BaseAppCompatActivity() {
+
+    companion object {
+        fun getStartIntent(context: Context): Intent {
+            val intent = Intent(context, MainActivity::class.java)
+            return intent
+        }
+    }
 
     @Inject
     lateinit var factory: ViewModelProvider.Factory

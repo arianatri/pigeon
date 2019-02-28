@@ -5,6 +5,7 @@ import android.app.Application
 import com.theapache64.pigeon.di.components.DaggerAppComponent
 import com.theapache64.twinkill.TwinKill
 import com.theapache64.twinkill.di.modules.BaseNetworkModule
+import com.theapache64.twinkill.di.modules.ContextModule
 import com.theapache64.twinkill.utils.Font
 import com.theapache64.twinkill.utils.retrofit.interceptors.CurlInterceptor
 import dagger.android.AndroidInjector
@@ -23,6 +24,7 @@ class App : Application(), HasActivityInjector {
         super.onCreate()
 
         DaggerAppComponent.builder()
+            .contextModule(ContextModule(this))
             .baseNetworkModule(BaseNetworkModule("http://theapache64.com/pigeon/v1/"))
             .build()
             .inject(this)

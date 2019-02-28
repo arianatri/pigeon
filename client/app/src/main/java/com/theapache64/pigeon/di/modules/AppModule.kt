@@ -1,6 +1,7 @@
 package com.theapache64.pigeon.di.modules
 
 import android.app.Application
+import com.theapache64.twinkill.di.modules.PreferenceModule
 import dagger.Module
 import dagger.Provides
 import dagger.android.support.AndroidSupportInjectionModule
@@ -10,7 +11,8 @@ import dagger.android.support.AndroidSupportInjectionModule
         AndroidSupportInjectionModule::class,
         NetworkModule::class,
         BuildersModule::class,
-        ViewModelModule::class
+        ViewModelModule::class,
+        PreferenceModule::class
     ]
 )
 class AppModule(private val application: Application) {
