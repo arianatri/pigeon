@@ -58,6 +58,9 @@ dependencies {
     // TwinKill
     implementation 'com.theapache64.twinkill:twinkill:2.1.1'
 
+    // Dexter
+    implementation 'com.karumi:dexter:5.0.0'
+
     // Test
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.2-alpha01'

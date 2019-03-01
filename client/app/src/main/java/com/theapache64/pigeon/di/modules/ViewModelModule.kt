@@ -1,6 +1,7 @@
 package com.theapache64.pigeon.di.modules
 
 import androidx.lifecycle.ViewModel
+import com.theapache64.pigeon.ui.activities.login.LogInViewModel
 import com.theapache64.pigeon.ui.activities.main.MainViewModel
 import com.theapache64.pigeon.ui.activities.splash.SplashViewModel
 import com.theapache64.twinkill.di.modules.BaseViewModelModule
@@ -22,4 +23,11 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(MainViewModel::class)
     abstract fun bindMainViewModel(viewModel: MainViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(LogInViewModel::class)
+    abstract fun bindLogInViewModel(viewModel: LogInViewModel): ViewModel
+
+
 }

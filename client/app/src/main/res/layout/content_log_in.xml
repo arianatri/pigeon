@@ -6,10 +6,6 @@
     <data>
 
         <variable
-            name="viewModel"
-            type="com.theapache64.pigeon.ui.activities.login.LogInViewModel" />
-
-        <variable
             name="view"
             type="com.theapache64.pigeon.ui.activities.login.LogInView" />
     </data>
@@ -26,7 +22,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent" 
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:context=".ui.activities.login.LogInActivity">
 
@@ -43,9 +39,10 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="ContentDescription" />
 
-                <!--Username-->
+
+                <!--Name-->
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/til_imei"
+                    android:id="@+id/til_name"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="50dp"
@@ -57,14 +54,37 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/hint_imei"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="@string/hint_name"
                         android:inputType="text"
                         android:singleLine="true"
-                        android:text="@={viewModel.imei}" />
+                        android:text="@{name}" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <!--LogIn-->
+                <!--IMEI-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_imei"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@id/til_name"
+                    app:layout_constraintStart_toStartOf="@id/til_name"
+                    app:layout_constraintTop_toBottomOf="@id/til_name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="@string/hint_imei"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:text="@{imei}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--Start-->
                 <com.google.android.material.button.MaterialButton
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     fontPath="fonts/GoogleSans-Medium.ttf"

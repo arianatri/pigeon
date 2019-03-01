@@ -7,9 +7,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.theapache64.pigeon.R
 import com.theapache64.pigeon.data.remote.ApiInterface
+import com.theapache64.pigeon.ui.activities.login.LogInActivity
 import com.theapache64.pigeon.ui.activities.main.MainActivity
 import com.theapache64.twinkill.ui.activities.base.BaseAppCompatActivity
 import com.theapache64.twinkill.utils.extensions.info
+import com.theapache64.twinkill.utils.extensions.toast
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 
@@ -38,9 +40,16 @@ class SplashActivity : BaseAppCompatActivity() {
                 }
 
                 SplashViewModel.ActivityID.LOGIN -> {
+                    startActivity(LogInActivity.getStartIntent(this))
                 }
 
+                else -> {
+                    toast("Undefined activity launch id $it")
+                }
             }
+
+            // end splash
+            finish()
         })
 
         Handler().postDelayed({
