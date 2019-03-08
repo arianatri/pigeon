@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a22820aa-9f76-4491-b00b-7662a9ace402" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/api/src/com/theah64/pigeon/database/tables/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/com/theah64/pigeon/database/tables/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/com/theah64/pigeon/servlets/GetAPIKeyServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/com/theah64/pigeon/servlets/GetAPIKeyServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/client/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/src/main/java/com/theapache64/pigeon/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/src/main/java/com/theapache64/pigeon/App.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/src/main/java/com/theapache64/pigeon/data/remote/ApiInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/src/main/java/com/theapache64/pigeon/data/remote/ApiInterface.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/src/main/java/com/theapache64/pigeon/data/repositories/DeviceRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/src/main/java/com/theapache64/pigeon/data/repositories/DeviceRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/src/main/java/com/theapache64/pigeon/data/repositories/UserRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/src/main/java/com/theapache64/pigeon/data/repositories/UserRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/src/main/java/com/theapache64/pigeon/ui/activities/login/LogInActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/src/main/java/com/theapache64/pigeon/ui/activities/login/LogInActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/src/main/java/com/theapache64/pigeon/ui/activities/login/LogInViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/src/main/java/com/theapache64/pigeon/ui/activities/login/LogInViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/src/main/res/layout/content_log_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/src/main/res/layout/content_log_in.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/client/build.gradle" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-2065949097">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../android-Camera2Basic" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../kotlin-mvvm" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="53" />
+    <option name="y" value="-4" />
+    <option name="width" value="1313" />
+    <option name="height" value="772" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a22820aa-9f76-4491-b00b-7662a9ace402" name="Default Changelist" comment="" />
+      <created>1552040144671</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1552040144671</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="53" y="-4" width="1313" height="772" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.32945737" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Captures" order="0" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Palette&#9;" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>

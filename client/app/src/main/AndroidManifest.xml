@@ -4,7 +4,13 @@
     package="com.theapache64.pigeon">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!--To get IMEI - LogIn -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!--To get Owner Name - LogIn-->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:name=".App"

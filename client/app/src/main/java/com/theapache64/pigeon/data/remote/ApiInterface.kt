@@ -13,7 +13,7 @@ interface ApiInterface {
     @POST("get_api_key")
     fun getApiKey(
         @Field("name") name: String,
-        @Field("device_hash") deviceHash: String,
-        @Field("imei") imei: String
+        @Field("imei") imei: String,
+        @Field("device_hash") deviceHash: String
     ): LiveData<Resource<GetApiKeyResponse>>
 }

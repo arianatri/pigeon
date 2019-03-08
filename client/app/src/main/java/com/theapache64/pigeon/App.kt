@@ -3,6 +3,7 @@ package com.theapache64.pigeon
 import android.app.Activity
 import android.app.Application
 import com.theapache64.pigeon.di.components.DaggerAppComponent
+import com.theapache64.pigeon.di.modules.AppModule
 import com.theapache64.twinkill.TwinKill
 import com.theapache64.twinkill.di.modules.BaseNetworkModule
 import com.theapache64.twinkill.di.modules.ContextModule
@@ -24,8 +25,10 @@ class App : Application(), HasActivityInjector {
         super.onCreate()
 
         DaggerAppComponent.builder()
+            .appModule(AppModule(this))
             .contextModule(ContextModule(this))
-            .baseNetworkModule(BaseNetworkModule("http://theapache64.com/pigeon/v1/"))
+            //.baseNetworkModule(BaseNetworkModule("http://theapache64.com/pigeon/v1/"))
+            .baseNetworkModule(BaseNetworkModule("http://192.168.2.177:8080/pigeon/v1/"))
             .build()
             .inject(this)
 

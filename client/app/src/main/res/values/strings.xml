@@ -5,6 +5,8 @@
     <string name="title_activity_log_in">LogInActivity</string>
     <string name="hint_imei">IMEI</string>
     <string name="label_start">START</string>
-    <string name="permission_device_state">Need device state permission to get IMEI</string>
+    <string name="permission_read_device_details">We need permission to read device details</string>
     <string name="hint_name">Name</string>
+    <string name="login_error_name">Invalid name</string>
+    <string name="login_error_imei">Invalid IMEI</string>
 </resources>

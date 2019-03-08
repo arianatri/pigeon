@@ -47,8 +47,8 @@ public class GetAPIKeyServlet extends AdvancedBaseServlet {
         User user = usersTable.get(Users.COLUMN_DEVICE_HASH, deviceHash);
 
         if (user != null) {
-            //EMP exist.
 
+            //EMP exist.
             if (fcmId != null) {
 
                 //Updating fcm id
