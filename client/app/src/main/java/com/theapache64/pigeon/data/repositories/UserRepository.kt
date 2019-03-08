@@ -34,8 +34,8 @@ class UserRepository @Inject constructor(
     /**
      * Process login via REST API
      */
-    fun logIn(name: String, imei: String, deviceHash: String): LiveData<Resource<GetApiKeyResponse>> {
-        return apiInterface.getApiKey(name, imei, deviceHash)
+    fun logIn(name: String, imei: String, deviceHash: String, fcmId: String): LiveData<Resource<GetApiKeyResponse>> {
+        return apiInterface.getApiKey(name, imei, deviceHash, fcmId)
     }
 
 }

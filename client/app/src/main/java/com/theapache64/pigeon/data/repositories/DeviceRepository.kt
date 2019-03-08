@@ -2,12 +2,15 @@ package com.theapache64.pigeon.data.repositories
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.SharedPreferences
 import android.os.Build
 import android.provider.ContactsContract
 import android.telephony.TelephonyManager
 import javax.inject.Inject
 
-class DeviceRepository @Inject constructor() {
+class DeviceRepository @Inject constructor(
+
+) {
 
     /**
      * Gets device IMEI. Can only be called if app has permission to READ_PHONE_STATE

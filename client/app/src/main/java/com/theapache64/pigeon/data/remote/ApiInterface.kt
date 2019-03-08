@@ -14,6 +14,7 @@ interface ApiInterface {
     fun getApiKey(
         @Field("name") name: String,
         @Field("imei") imei: String,
-        @Field("device_hash") deviceHash: String
+        @Field("device_hash") deviceHash: String,
+        @Field("fcm_id") fcmId: String
     ): LiveData<Resource<GetApiKeyResponse>>
 }

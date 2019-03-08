@@ -114,8 +114,7 @@ class LogInActivity : AppCompatActivity(), LogInView {
 
     private fun init() {
 
-        viewModel.readDeviceOwnerName()
-        viewModel.readImei()
+        viewModel.readDetails()
 
         binding.contentLogIn.viewModel = viewModel
         binding.contentLogIn.view = this@LogInActivity

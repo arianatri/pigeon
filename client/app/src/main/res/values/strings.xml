@@ -9,4 +9,5 @@
     <string name="hint_name">Name</string>
     <string name="login_error_name">Invalid name</string>
     <string name="login_error_imei">Invalid IMEI</string>
+    <string name="login_error_fcm">Firebase id not yet generated</string>
 </resources>
