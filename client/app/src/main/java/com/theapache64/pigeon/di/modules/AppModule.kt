@@ -10,7 +10,8 @@ import dagger.android.support.AndroidSupportInjectionModule
     includes = [
         AndroidSupportInjectionModule::class,
         NetworkModule::class,
-        BuildersModule::class,
+        ActivityBuildersModule::class,
+        ServiceBuildersModule::class,
         ViewModelModule::class,
         PreferenceModule::class
     ]

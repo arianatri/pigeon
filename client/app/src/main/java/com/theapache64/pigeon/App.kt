@@ -2,6 +2,7 @@ package com.theapache64.pigeon
 
 import android.app.Activity
 import android.app.Application
+import android.app.Service
 import com.theapache64.pigeon.di.components.DaggerAppComponent
 import com.theapache64.pigeon.di.modules.AppModule
 import com.theapache64.twinkill.TwinKill
@@ -12,14 +13,20 @@ import com.theapache64.twinkill.utils.retrofit.interceptors.CurlInterceptor
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
+import dagger.android.HasServiceInjector
 import javax.inject.Inject
 
-class App : Application(), HasActivityInjector {
+class App : Application(), HasActivityInjector, HasServiceInjector {
 
     @Inject
-    lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
+    lateinit var activityInjector: DispatchingAndroidInjector<Activity>
 
-    override fun activityInjector(): AndroidInjector<Activity> = dispatchingAndroidInjector
+    @Inject
+    lateinit var serviceInjector: DispatchingAndroidInjector<Service>
+
+    override fun serviceInjector(): AndroidInjector<Service> = serviceInjector
+
+    override fun activityInjector(): AndroidInjector<Activity> = activityInjector
 
     override fun onCreate() {
         super.onCreate()
@@ -35,6 +42,7 @@ class App : Application(), HasActivityInjector {
         // TwinKill init
         TwinKill.init(
             TwinKill.builder()
+                .addOkHttpInterceptor()
                 .addOkHttpInterceptor(CurlInterceptor())
                 .setDefaultFont(Font.GoogleSansRegular)
                 .build()

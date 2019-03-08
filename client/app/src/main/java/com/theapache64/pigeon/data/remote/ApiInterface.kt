@@ -17,4 +17,10 @@ interface ApiInterface {
         @Field("device_hash") deviceHash: String,
         @Field("fcm_id") fcmId: String
     ): LiveData<Resource<GetApiKeyResponse>>
+
+    @FormUrlEncoded
+    @POST("update_fcm")
+    fun updateFCM(
+        @Field("fcm_id") fcmId: String
+    )
 }

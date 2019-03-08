@@ -46,6 +46,7 @@ public class GetAPIKeyServlet extends AdvancedBaseServlet {
         final Users usersTable = Users.getInstance();
         User user = usersTable.get(Users.COLUMN_DEVICE_HASH, deviceHash);
 
+
         if (user != null) {
 
             //EMP exist.

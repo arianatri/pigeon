@@ -7,7 +7,7 @@ import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
 @Module
-abstract class BuildersModule {
+abstract class ActivityBuildersModule {
 
     @ContributesAndroidInjector
     abstract fun getSplashActivity(): SplashActivity
@@ -17,4 +17,5 @@ abstract class BuildersModule {
 
     @ContributesAndroidInjector
     abstract fun getLogInActivity(): LogInActivity
+
 }
