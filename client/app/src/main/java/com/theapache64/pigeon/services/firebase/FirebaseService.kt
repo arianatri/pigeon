@@ -1,14 +1,18 @@
 package com.theapache64.pigeon.services.firebase
 
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProviders
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.theapache64.pigeon.data.repositories.AuthRepository
 import com.theapache64.pigeon.data.repositories.PreferenceRepository
+import com.theapache64.twinkill.utils.Resource
 import com.theapache64.twinkill.utils.extensions.info
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 
 class FirebaseService : FirebaseMessagingService() {
+
 
     @Inject
     lateinit var preferenceRepository: PreferenceRepository
