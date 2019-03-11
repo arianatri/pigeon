@@ -13,6 +13,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -57,7 +58,7 @@ dependencies {
     implementation 'com.theah64.materialcolors:materialcolors:1.0.0'
 
     // TwinKill
-    implementation 'com.theapache64.twinkill:twinkill:2.1.2-alpha03'
+    implementation 'com.theapache64.twinkill:twinkill:2.1.2-alpha05'
 
     // Dexter
     implementation 'com.karumi:dexter:5.0.0'
