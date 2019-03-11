@@ -9,7 +9,6 @@ class PreferenceRepository @Inject constructor(
     private val sharedPreferences: SharedPreferences
 ) {
 
-
     /**
      * Gets string
      */

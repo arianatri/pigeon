@@ -21,8 +21,8 @@ import javax.inject.Inject
 
 class App : Application(), HasActivityInjector, HasServiceInjector {
 
-   /* var user: GetApiKeyResponse.User? = null
-        @Inject set*/
+    var userRepository: UserRepository? = null
+        @Inject set
 
     @Inject
     lateinit var activityInjector: DispatchingAndroidInjector<Activity>
@@ -50,6 +50,7 @@ class App : Application(), HasActivityInjector, HasServiceInjector {
         TwinKill.init(
             TwinKill.builder()
                 .setNeedDeepCheckOnNetworkResponse(true)
+                .addOkHttpInterceptor(AuthorizationInterceptor(userRepository!!.getUserFromPref()?.apiKey))
                 .addOkHttpInterceptor(CurlInterceptor())
                 .setDefaultFont(Font.GoogleSansRegular)
                 .build()

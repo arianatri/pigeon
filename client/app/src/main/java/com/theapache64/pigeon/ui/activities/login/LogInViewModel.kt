@@ -9,7 +9,7 @@ import com.theapache64.pigeon.R
 import com.theapache64.pigeon.data.remote.responses.GetApiKeyResponse
 import com.theapache64.pigeon.data.repositories.DeviceRepository
 import com.theapache64.pigeon.data.repositories.PreferenceRepository
-import com.theapache64.pigeon.data.repositories.UserRepository
+import com.theapache64.pigeon.data.repositories.AuthRepository
 import com.theapache64.twinkill.utils.DarkKnight
 import com.theapache64.twinkill.utils.Resource
 import javax.inject.Inject
@@ -18,7 +18,7 @@ class LogInViewModel @Inject constructor(
     application: Application,
     private val deviceRepository: DeviceRepository,
     private val preferenceRepository: PreferenceRepository,
-    private val userRepository: UserRepository
+    private val userRepository: AuthRepository
 ) : AndroidViewModel(application) {
 
     private val isReadyToReadApiKey = MutableLiveData<Boolean>()
