@@ -16,7 +16,9 @@ import com.karumi.dexter.listener.multi.CompositeMultiplePermissionsListener
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.karumi.dexter.listener.multi.SnackbarOnAnyDeniedMultiplePermissionsListener
 import com.theapache64.pigeon.R
+import com.theapache64.pigeon.data.repositories.UserRepository
 import com.theapache64.pigeon.databinding.ActivityLogInBinding
+import com.theapache64.pigeon.ui.activities.main.MainActivity
 import com.theapache64.twinkill.utils.Resource
 import com.theapache64.twinkill.utils.extensions.bindContentView
 import com.theapache64.twinkill.utils.extensions.toast
@@ -34,6 +36,9 @@ class LogInActivity : AppCompatActivity(), LogInView {
 
     @Inject
     lateinit var factory: ViewModelProvider.Factory
+
+    @Inject
+    lateinit var userRepository: UserRepository
 
     private lateinit var binding: ActivityLogInBinding
     private lateinit var viewModel: LogInViewModel
@@ -131,6 +136,11 @@ class LogInActivity : AppCompatActivity(), LogInView {
                 Resource.Status.SUCCESS -> {
                     hideLoading()
                     toast(response.data!!.message)
+
+                    val user = response.data!!.data!!
+                    userRepository.saveUser(user)
+                    startActivity(MainActivity.getStartIntent(this))
+                    finish()
                 }
 
                 Resource.Status.ERROR -> {
