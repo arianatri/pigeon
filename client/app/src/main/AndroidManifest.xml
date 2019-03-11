@@ -48,7 +48,7 @@
 
         <!--Firebase service-->
         <service
-            android:name=".utils.firebase.FirebaseService"
+            android:name="com.theapache64.pigeon.services.firebase.FirebaseService"
             tools:ignore="ExportedService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

@@ -1,13 +1,12 @@
 package com.theapache64.pigeon.ui.activities.splash
 
 import androidx.lifecycle.ViewModel
-import com.theapache64.pigeon.data.remote.responses.GetApiKeyResponse
-import com.theapache64.pigeon.data.repositories.UserRepository
+import com.theapache64.pigeon.data.repositories.UserPrefRepository
 import com.theapache64.twinkill.utils.livedata.SingleLiveEvent
 import javax.inject.Inject
 
 class SplashViewModel @Inject constructor(
-    private val userRepository: UserRepository
+    private val userRepository: UserPrefRepository
 ) : ViewModel() {
 
     private val launchActivityEvent = SingleLiveEvent<ActivityID>()

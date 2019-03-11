@@ -22,5 +22,5 @@ interface ApiInterface {
     @POST("update_fcm")
     fun updateFCM(
         @Field("fcm_id") fcmId: String
-    )
+    ): LiveData<Resource<GetApiKeyResponse>>
 }

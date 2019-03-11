@@ -16,7 +16,7 @@ import com.karumi.dexter.listener.multi.CompositeMultiplePermissionsListener
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.karumi.dexter.listener.multi.SnackbarOnAnyDeniedMultiplePermissionsListener
 import com.theapache64.pigeon.R
-import com.theapache64.pigeon.data.repositories.UserRepository
+import com.theapache64.pigeon.data.repositories.UserPrefRepository
 import com.theapache64.pigeon.databinding.ActivityLogInBinding
 import com.theapache64.pigeon.ui.activities.main.MainActivity
 import com.theapache64.twinkill.utils.Resource
@@ -38,7 +38,7 @@ class LogInActivity : AppCompatActivity(), LogInView {
     lateinit var factory: ViewModelProvider.Factory
 
     @Inject
-    lateinit var userRepository: UserRepository
+    lateinit var userRepository: UserPrefRepository
 
     private lateinit var binding: ActivityLogInBinding
     private lateinit var viewModel: LogInViewModel

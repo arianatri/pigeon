@@ -17,4 +17,8 @@ class AuthRepository @Inject constructor(
         return apiInterface.getApiKey(name, imei, deviceHash, fcmId)
     }
 
+    fun updateFCM(fcmId: String): LiveData<Resource<GetApiKeyResponse>> {
+        return apiInterface.updateFCM(fcmId)
+    }
+
 }

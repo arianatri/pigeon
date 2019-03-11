@@ -29,5 +29,4 @@ abstract class ViewModelModule {
     @ViewModelKey(LogInViewModel::class)
     abstract fun bindLogInViewModel(viewModel: LogInViewModel): ViewModel
 
-
 }

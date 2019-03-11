@@ -3,8 +3,7 @@ package com.theapache64.pigeon
 import android.app.Activity
 import android.app.Application
 import android.app.Service
-import com.theapache64.pigeon.data.remote.responses.GetApiKeyResponse
-import com.theapache64.pigeon.data.repositories.UserRepository
+import com.theapache64.pigeon.data.repositories.UserPrefRepository
 import com.theapache64.pigeon.di.components.DaggerAppComponent
 import com.theapache64.pigeon.di.modules.AppModule
 import com.theapache64.twinkill.TwinKill
@@ -21,7 +20,7 @@ import javax.inject.Inject
 
 class App : Application(), HasActivityInjector, HasServiceInjector {
 
-    var userRepository: UserRepository? = null
+    var userRepository: UserPrefRepository? = null
         @Inject set
 
     @Inject

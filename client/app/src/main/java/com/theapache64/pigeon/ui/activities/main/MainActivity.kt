@@ -10,7 +10,10 @@ import android.view.MenuItem
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.theapache64.pigeon.R
+import com.theapache64.pigeon.databinding.ActivityMainBinding
+import com.theapache64.pigeon.databinding.ContentMainBinding
 import com.theapache64.twinkill.ui.activities.base.BaseAppCompatActivity
+import com.theapache64.twinkill.utils.extensions.bindContentView
 import com.theapache64.twinkill.utils.extensions.toast
 import dagger.android.AndroidInjection
 
@@ -33,17 +36,12 @@ class MainActivity : BaseAppCompatActivity() {
         AndroidInjection.inject(this)
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        val binding = bindContentView<ActivityMainBinding>(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
         val viewModel = ViewModelProviders.of(this, factory).get(MainViewModel::class.java)
+        binding.contentMain.viewModel = viewModel
 
-        toast(viewModel.toString())
-
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

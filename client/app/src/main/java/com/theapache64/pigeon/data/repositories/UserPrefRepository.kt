@@ -6,7 +6,7 @@ import com.squareup.moshi.Moshi
 import com.theapache64.pigeon.data.remote.responses.GetApiKeyResponse
 import javax.inject.Inject
 
-class UserRepository @Inject constructor(
+class UserPrefRepository @Inject constructor(
     private val sharedPreferences: SharedPreferences,
     private val moshi: Moshi
 ) {

@@ -6,19 +6,14 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.theapache64.pigeon.R
-import com.theapache64.pigeon.data.remote.ApiInterface
 import com.theapache64.pigeon.ui.activities.login.LogInActivity
 import com.theapache64.pigeon.ui.activities.main.MainActivity
 import com.theapache64.twinkill.ui.activities.base.BaseAppCompatActivity
-import com.theapache64.twinkill.utils.extensions.info
 import com.theapache64.twinkill.utils.extensions.toast
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 
 class SplashActivity : BaseAppCompatActivity() {
-
-    @Inject
-    lateinit var apiInterface: ApiInterface
 
     @Inject
     lateinit var factory: ViewModelProvider.Factory
